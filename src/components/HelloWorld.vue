@@ -1,7 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+defineProps({
+  msg: String
+})
 
 const count = ref(0)
 </script>
@@ -9,30 +11,26 @@ const count = ref(0)
 <template>
   <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+  <p>
+    
+    <a href="https://gitee.com/uiadmin/uiadmin" target="_blank">Gitee</a>
+    +
+    <a href="https://github.com/ijry/uiadmin" target="_blank">Github</a>
+  </p>
 
   <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://uiadmin.net/" target="_blank">UiAdmin Documentation</a>
   </p>
+
+  <button type="button" @click="count++">count is: {{ count }}</button>
   <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
+    Edit
+    <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+a {
+  color: #42b983;
 }
 </style>
